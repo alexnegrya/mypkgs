@@ -1,6 +1,7 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: mypkgs
 Upstream-Contact: Alexandr Negrya <alexandr.negrya@gmail.com>
+Source: https://github.com/alexnegrya/mypkgs/
 
 Files: *
 Copyright: 2025 Alexandr Negrya <alexandr.negrya@gmail.com>

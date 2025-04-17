@@ -4,6 +4,7 @@ Priority: optional
 Maintainer: Alexandr Negrya <alexandr.negrya@gmail.com>
 Build-Depends: debhelper-compat (= 11), python3, python3-setuptools
 Standards-Version: 4.7.2
+Homepage: https://github.com/alexnegrya/mypkgs/
 
 Package: mypkgs
 Architecture: all
