@@ -11,4 +11,3 @@ Architecture: all
 Depends: ${python3:Depends}
 Description: Lists manually installed Debian packages
  Simple util to list manually installed packages on Debian written using Python.
- Uses "apt-mark showmanual"
