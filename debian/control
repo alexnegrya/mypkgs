@@ -1,0 +1,13 @@
+Source: mypkgs
+Section: utils
+Priority: optional
+Maintainer: Alexandr Negrya <alexandr.negrya@gmail.com>
+Build-Depends: debhelper-compat (= 11), python3, python3-setuptools
+Standards-Version: 4.7.2
+
+Package: mypkgs
+Architecture: all
+Depends: ${python3:Depends}
+Description: Lists manually installed Debian packages
+ Simple util to list manually installed packages on Debian written using Python.
+ Uses "apt-mark showmanual"

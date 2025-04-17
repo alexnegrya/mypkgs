@@ -1,0 +1,27 @@
+#!/usr/bin/make -f
+
+# See https://www.debian.org/doc/manuals/debmake-doc/ for help.
+
+# Uncomment this to turn on verbose mode.
+# export DH_VERBOSE=1
+
+export DEB_BUILD_MAINTAINER_OPTIONS = 'noautodbgsym'
+export DH_PYTHON_VERSION = 3
+export PYBUILD_SYSTEM=distutils
+
+%:
+	dh $@ --with python3
+
+override_dh_auto_build:
+	dh_auto_build
+
+override_dh_auto_install:
+	dh_auto_install --destdir=debian/mypkgs
+
+override_dh_link:
+	install -d "$(CURDIR)/debian/mypkgs/usr/bin"
+	rm -f "$(CURDIR)/debian/mypkgs/usr/bin/mypkgs"
+	ln -s "/usr/lib/python3/dist-packages/mypkgs/core.py" "$(CURDIR)/debian/mypkgs/usr/bin/mypkgs"
+
+override_dh_strip:
+	dh_strip --no-automatic
